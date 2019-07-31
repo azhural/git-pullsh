@@ -1,0 +1,2 @@
+[alias]
+  pullsh = !/path/to/the/script
