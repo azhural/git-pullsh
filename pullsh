@@ -5,6 +5,4 @@ arr[1]="pull --allow-unrelated-histories"
 rand=$(($RANDOM %2))
 cmd=${arr[$rand]}
 branch=$( (if [[ "$cmd" == "push" ]]; then git branch; fi ; git ls-remote -h $remote ) | awk '{print $NF}' | sort -R | head -n 1 )
-set -x
 git $cmd --force $remote "$branch"
-
